@@ -1,0 +1,86 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 440px;
+
+    .login-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .login-logo {
+            width: 50%;
+        }
+
+        .login-title-login {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 5px;
+        }
+    }
+
+    .login-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0px;
+
+        .login-input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            input {
+                padding: 10px;
+                width: 60%;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border: none;
+                border-bottom: 1px solid black;
+            }
+
+            .login-password {
+                margin-top: 20px;
+            }
+        }
+
+        .login-button-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 30px;
+
+            .login-button {
+                padding: 8px;
+                width: 60%;
+                background-color: black;
+                color: white;
+                text-align: center;
+                font-weight: 500;
+                font-size: 16px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .login-join {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        font-size: 14px;
+
+        .join-member {
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+    }
+}
