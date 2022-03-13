@@ -5,6 +5,24 @@ import { Dialog } from "@material-ui/core";
 
 class Join extends Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            email: '',
+            nickname: '',
+            password: '',
+            passwordCheck: '',
+            passwordMessage: '',
+        }
+    }   
+
+    handleChangeInputData = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+        console.log(this.state.email)
+    }
+
     render() {
         const { open, onClose } = this.props
         return (
@@ -19,10 +37,13 @@ class Join extends Component {
                     </div>
                     <div className="join-body">
                         <div className='join-input'>
-                            <input className="join-id" type="text" name='id' placeholder="이메일"></input>
-                            <input className="join-nickname" type="text" name='nickname' placeholder="닉네임"></input>
-                            <input className="join-password" type="password" name='password' placeholder="비밀번호"></input>
-                            <input className="join-password-check" type="password" name='passwordCheck' placeholder="비밀번호 확인"></input>
+                            <input className="join-id" type="text" name='email' placeholder="이메일" onChange={this.handleChangeInputData}></input>
+                            <div>중복된 이메일 입니다.</div>
+                            <input className="join-nickname" type="text" name='nickname' placeholder="닉네임" onChange={this.handleChangeInputData}></input>
+                            <div>중복된 닉네임 입니다.</div>
+                            <input className="join-password" type="password" name='password' placeholder="비밀번호" onChange={this.handleChangeInputData}></input>
+                            <input className="join-password-check" type="password" name='passwordCheck' placeholder="비밀번호 확인" onChange={this.handleChangeInputData}></input>
+                            <div>비밀번호가 일치하지 않습니다.</div>
                         </div>
                         <div className='join-agree'>
                             <div className='join-agree-check'>
